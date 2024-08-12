@@ -1,0 +1,13 @@
+explosionRadius: 3
+missileParticle: SMOKE_NORMAL
+missileParticleCount: 10
+explosionParticle: EXPLOSION_LARGE
+explosionParticleCount: 1
+fireballEnabled: true
+missileEntity: FIREBALL
+targetYOffset: 5
+spawnDistance:
+  x: 40
+  y: 20
+  z: 40
+regionFlag: EDP-ENCHANTS

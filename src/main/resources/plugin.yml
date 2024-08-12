@@ -1,0 +1,8 @@
+name: Enchantments
+version: 1.0
+main: me.abobymotaki.enchantments.Enchantments
+depend: [WorldEdit, WorldGuard]
+commands:
+  missiles:
+    description: Launch missiles.
+    usage: /<command> [player]
