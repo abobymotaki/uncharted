@@ -1,0 +1,526 @@
+I have a working TypeScript code for generating a CV PDF using PDFKit, with a two-column layout. The right column (containing sections like Work Experience, Education, and Projects) is already perfect and should not be modified. I need help fixing the left column (containing sections like Profile Picture, About Me, Skills, and Contact) to improve its layout and styling. Below is the current code:
+
+'use server';
+
+import type { CvFormData, EducationEntry, ProjectEntry, SkillEntry, LanguageEntry, WorkExperienceEntry } from '@/types/cv';
+import PDFDocument from 'pdfkit';
+import { PassThrough } from 'stream';
+
+const FONT_FAMILY_SANS = 'Helvetica';
+const FONT_FAMILY_SANS_BOLD = 'Helvetica-Bold';
+const FONT_FAMILY_SANS_ITALIC = 'Helvetica-Oblique';
+
+const CLASSIC_COLORS = {
+  leftColumnBg: '#F5E6D3',
+  rightColumnSectionBg: '#F3F4F6',
+  primaryText: '#2D3748',
+  nameHeader: '#000000',
+  roleHeader: '#333333',
+  lightText: '#555555',
+  accentText: '#AF8C5B',
+  contactLabelColor: '#4A5568',
+  progressBarBg: '#D1D5DB',
+  progressBarFill: '#AF8C5B',
+  progressBarBorder: '#D4B28E',
+  progressBarText: '#FFFFFF',
+  sectionTitleColor: '#333333',
+};
+
+const BRAND_TEXT = "CeeVee Go";
+const PAGE_WIDTH_PT = 595.28; // A4 width in points (210mm)
+const PAGE_HEIGHT_PT = 841.89; // A4 height in points (297mm)
+
+const GLOBAL_MARGIN_PT = 36.85; // Approx 13mm
+
+const LEFT_COLUMN_WIDTH_INCREASE_PT = 26.9; // Approx 9.5mm
+const ORIGINAL_LEFT_COLUMN_RATIO = 0.33;
+const ORIGINAL_LEFT_COLUMN_WIDTH_PT = PAGE_WIDTH_PT * ORIGINAL_LEFT_COLUMN_RATIO;
+const LEFT_COLUMN_ACTUAL_WIDTH_PT = ORIGINAL_LEFT_COLUMN_WIDTH_PT + LEFT_COLUMN_WIDTH_INCREASE_PT;
+
+const LEFT_COLUMN_X_PADDING_PT = 14.74; // Approx 5.2mm
+const LEFT_COLUMN_CONTENT_MAX_WIDTH_PT = LEFT_COLUMN_ACTUAL_WIDTH_PT - (LEFT_COLUMN_X_PADDING_PT * 2);
+
+const GUTTER_PT = 22.67; // Approx 8mm
+const RIGHT_COLUMN_X_START_PT = LEFT_COLUMN_ACTUAL_WIDTH_PT + GUTTER_PT;
+const RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT = PAGE_WIDTH_PT - RIGHT_COLUMN_X_START_PT - GLOBAL_MARGIN_PT;
+
+const INTER_SECTION_Y_GAP_PT = 22.67; // ~8mm between sections
+const SECTION_TITLE_TO_CONTENT_Y_GAP_PT = 8.5; // 3mm
+const INTRA_SECTION_ITEM_Y_GAP_PT = 2.83; // ~10px (gap between child objects within a section, except Work Experience)
+const INTRA_SECTION_ITEM_Y_GAP_WORK_EXP_PT = 7.5; // ~15px (gap between Work Experience child objects)
+const INTRA_OBJECT_Y_GAP_PT = 4.23; // ~15px (base gap between individual items within an object)
+
+interface DrawingState {
+  doc: PDFKit.PDFDocument;
+  yPosLeft: number;
+  yPosRight: number;
+  currentPage: number;
+  formData: CvFormData;
+}
+
+async function dataUriToBuffer(dataUri: string): Promise<Buffer | null> {
+  if (!dataUri || typeof dataUri !== 'string') return null;
+
+  if (dataUri.startsWith('data:')) {
+    try {
+      const base64Data = dataUri.split(',')[1];
+      if (!base64Data) return null;
+      return Buffer.from(base64Data, 'base64');
+    } catch (error) {
+      console.error("Error converting data URI to buffer: " + String(error));
+      return null;
+    }
+  } else if (dataUri.startsWith('http')) {
+    const fetch = (await import('node-fetch')).default;
+    try {
+      const response = await fetch(dataUri);
+      if (!response.ok) {
+        console.error("Failed to fetch image from URL: " + dataUri + ", status: " + String(response.status));
+        return null;
+      }
+      const arrayBuffer = await response.arrayBuffer();
+      return Buffer.from(arrayBuffer);
+    } catch (error) {
+      console.error("Error fetching image from URL: " + dataUri + ": " + String(error));
+      return null;
+    }
+  }
+  return null;
+}
+
+function addPageWithSetup(state: DrawingState): void {
+  state.doc.addPage({
+    margins: { top: GLOBAL_MARGIN_PT, bottom: GLOBAL_MARGIN_PT, left: 0, right: 0 },
+  });
+  state.currentPage++;
+  state.yPosLeft = GLOBAL_MARGIN_PT;
+  state.yPosRight = GLOBAL_MARGIN_PT;
+
+  state.doc.rect(0, 0, LEFT_COLUMN_ACTUAL_WIDTH_PT, PAGE_HEIGHT_PT)
+           .fill(CLASSIC_COLORS.leftColumnBg);
+  
+  addHeaderBranding(state);
+}
+
+function pageBreakIfNeeded(state: DrawingState, currentColumnY: number, elementHeight: number, column: 'left' | 'right'): number {
+  const pageThreshold = PAGE_HEIGHT_PT - GLOBAL_MARGIN_PT * 1.5; 
+  let newY = currentColumnY;
+
+  if (currentColumnY + elementHeight > pageThreshold) {
+    addPageWithSetup(state);
+    newY = (column === 'left') ? state.yPosLeft : state.yPosRight;
+  }
+  return newY;
+}
+
+function addHeaderBranding(state: DrawingState) {
+  const yOffset = GLOBAL_MARGIN_PT * 0.75;
+  state.doc.font(FONT_FAMILY_SANS_ITALIC)
+           .fontSize(8)
+           .fillColor('#969696') 
+           .text(BRAND_TEXT, 0, yOffset, {
+             width: PAGE_WIDTH_PT - GLOBAL_MARGIN_PT, 
+             align: 'right' 
+           });
+}
+
+function addFooterPagination(doc: PDFKit.PDFDocument, totalPages: number) {
+  doc.font(FONT_FAMILY_SANS)
+     .fontSize(8)
+     .fillColor('#787878') 
+     .text('Page ' + (doc.bufferedPageRange().count) + ' of ' + totalPages,
+           GLOBAL_MARGIN_PT, 
+           PAGE_HEIGHT_PT - GLOBAL_MARGIN_PT * 0.5,
+           { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+}
+
+async function drawClassicCV(doc: PDFKit.PDFDocument, data: CvFormData) {
+  const drawingState: DrawingState = {
+    doc,
+    yPosLeft: GLOBAL_MARGIN_PT,
+    yPosRight: GLOBAL_MARGIN_PT,
+    currentPage: 1,
+    formData: data,
+  };
+
+  doc.rect(0, 0, LEFT_COLUMN_ACTUAL_WIDTH_PT, PAGE_HEIGHT_PT).fill(CLASSIC_COLORS.leftColumnBg);
+  addHeaderBranding(drawingState);
+
+  // --- Left Column ---
+  // Profile Picture
+  if (data.profilePicture && typeof data.profilePicture === 'string') {
+    const picSize = LEFT_COLUMN_ACTUAL_WIDTH_PT * 0.55;
+    const picX = (LEFT_COLUMN_ACTUAL_WIDTH_PT - picSize) / 2;
+    
+    drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, picSize, 'left');
+    const imageBuffer = await dataUriToBuffer(data.profilePicture);
+
+    if (imageBuffer) {
+      try {
+        doc.save();
+        doc.circle(picX + picSize / 2, drawingState.yPosLeft + picSize / 2, picSize / 2).clip();
+        doc.image(imageBuffer, picX, drawingState.yPosLeft, { fit: [picSize, picSize], align: 'center', valign: 'center' });
+        doc.restore();
+        
+        doc.circle(picX + picSize / 2, drawingState.yPosLeft + picSize / 2, picSize / 2)
+           .lineWidth(1.5)
+           .stroke(CLASSIC_COLORS.leftColumnSectionBg);
+
+        drawingState.yPosLeft += picSize;
+      } catch (e) {
+        console.error("PDFKit: Error embedding profile picture:", e);
+        drawingState.yPosLeft += picSize;
+      }
+    } else {
+      drawingState.yPosLeft += picSize;
+    }
+    drawingState.yPosLeft += INTER_SECTION_Y_GAP_PT / 2;
+  } else {
+    drawingState.yPosLeft += 5 + INTER_SECTION_Y_GAP_PT / 2;
+  }
+
+  // About Me
+  if (data.summary && typeof data.summary === 'string' && data.summary.trim() !== '') {
+    drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, 20, 'left'); 
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(11).fillColor(CLASSIC_COLORS.sectionTitleColor)
+       .text('About Me', LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosLeft += doc.heightOfString('About Me', { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT }) + SECTION_TITLE_TO_CONTENT_Y_GAP_PT;
+    
+    const summaryHeight = doc.heightOfString(data.summary, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT, lineGap: 2 });
+    drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, summaryHeight, 'left');
+    doc.font(FONT_FAMILY_SANS).fontSize(9).fillColor(CLASSIC_COLORS.primaryText)
+       .text(data.summary, LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT, lineGap: 2 });
+    drawingState.yPosLeft += summaryHeight + INTER_SECTION_Y_GAP_PT;
+  }
+
+  // Skills
+  if (data.skillEntries && data.skillEntries.length > 0) {
+    drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, 20, 'left');
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(11).fillColor(CLASSIC_COLORS.sectionTitleColor)
+       .text('Skills', LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosLeft += doc.heightOfString('Skills', { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT }) + SECTION_TITLE_TO_CONTENT_Y_GAP_PT;
+
+    const barHeight = 14;
+    const barRadius = barHeight / 2;
+
+    data.skillEntries.forEach((skill: SkillEntry) => {
+      if (!skill || typeof skill.name !== 'string' || typeof skill.proficiency !== 'number') return;
+
+      drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, barHeight + INTRA_SECTION_ITEM_Y_GAP_PT + 2, 'left');
+      
+      doc.roundedRect(LEFT_COLUMN_X_PADDING_PT - 1, drawingState.yPosLeft - 1, LEFT_COLUMN_CONTENT_MAX_WIDTH_PT + 2, barHeight + 2, barRadius)
+         .lineWidth(0.5)
+         .stroke(CLASSIC_COLORS.progressBarBorder);
+      
+      doc.roundedRect(LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, LEFT_COLUMN_CONTENT_MAX_WIDTH_PT, barHeight, barRadius)
+         .fill(CLASSIC_COLORS.progressBarBg);
+      
+      const filledWidth = LEFT_COLUMN_CONTENT_MAX_WIDTH_PT * (skill.proficiency / 100);
+      if (filledWidth > 0) {
+        doc.roundedRect(LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, filledWidth, barHeight, barRadius)
+           .fill(CLASSIC_COLORS.progressBarFill);
+      }
+      
+      const skillNameText = `${skill.name} (${skill.proficiency}%)`;
+      doc.font(FONT_FAMILY_SANS_BOLD).fontSize(8).fillColor(CLASSIC_COLORS.progressBarText);
+      
+      const textWidth = doc.widthOfString(skillNameText);
+      const textHeightCalc = doc.heightOfString("W", {fontSize: 8});
+      const textY = drawingState.yPosLeft + (barHeight - textHeightCalc) / 2 + 0.5;
+      const textX = LEFT_COLUMN_X_PADDING_PT + 5;
+
+      const maxTextWidth = LEFT_COLUMN_CONTENT_MAX_WIDTH_PT - 10;
+      const truncatedText = textWidth > maxTextWidth ? skillNameText.slice(0, Math.floor(skillNameText.length * (maxTextWidth / textWidth))) + '...' : skillNameText;
+      doc.text(truncatedText, textX, textY, { width: maxTextWidth, lineBreak: false });
+
+      drawingState.yPosLeft += barHeight + INTRA_SECTION_ITEM_Y_GAP_PT + 2;
+    });
+    drawingState.yPosLeft += INTER_SECTION_Y_GAP_PT - INTRA_SECTION_ITEM_Y_GAP_PT;
+  }
+  
+  // Contacts
+  const contactItems = [
+    { label: 'Phone:', value: data.phone },
+    { label: 'Email:', value: data.email, isLink: true, prefix: 'mailto:' },
+    { label: 'Address:', value: data.address },
+    { label: 'LinkedIn:', value: data.linkedin, isLink: true },
+    { label: 'GitHub:', value: data.github, isLink: true },
+    { label: 'Portfolio:', value: data.portfolio, isLink: true },
+  ].filter(item => item.value && typeof item.value === 'string' && item.value.trim() !== '');
+
+  if (contactItems.length > 0) {
+    let estimatedContactSectionHeight = 20;
+    contactItems.forEach(item => {
+        estimatedContactSectionHeight += doc.heightOfString(String(item.value), {width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 9}) + INTRA_SECTION_ITEM_Y_GAP_PT;
+    });
+    
+    if (drawingState.yPosLeft + estimatedContactSectionHeight > PAGE_HEIGHT_PT - (GLOBAL_MARGIN_PT * 2) && drawingState.currentPage === 1 && contactItems.length > 3) {
+        addPageWithSetup(drawingState);
+    } else {
+        drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, 20, 'left');
+    }
+
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(11).fillColor(CLASSIC_COLORS.sectionTitleColor)
+       .text('Contact', LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosLeft += doc.heightOfString('Contact', { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT }) + SECTION_TITLE_TO_CONTENT_Y_GAP_PT;
+
+    contactItems.forEach(item => {
+      const itemValueStr = String(item.value);
+      const itemLineHeight = doc.heightOfString(itemValueStr, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT - (doc.widthOfString(item.label) + 5), fontSize: 9}) + INTRA_SECTION_ITEM_Y_GAP_PT;
+      drawingState.yPosLeft = pageBreakIfNeeded(drawingState, drawingState.yPosLeft, itemLineHeight, 'left');
+      
+      doc.font(FONT_FAMILY_SANS_BOLD).fontSize(9).fillColor(CLASSIC_COLORS.contactLabelColor)
+         .text(item.label, LEFT_COLUMN_X_PADDING_PT, drawingState.yPosLeft, { continued: true, width: doc.widthOfString(item.label) + 5 });
+      
+      doc.font(FONT_FAMILY_SANS).fillColor(item.isLink ? CLASSIC_COLORS.accentText : CLASSIC_COLORS.primaryText);
+      if (item.isLink) {
+        doc.text(itemValueStr, { link: (item.prefix || '') + itemValueStr, underline: true, width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT - (doc.widthOfString(item.label) + 5) });
+      } else {
+        doc.text(itemValueStr, { width: LEFT_COLUMN_CONTENT_MAX_WIDTH_PT - (doc.widthOfString(item.label) + 5) });
+      }
+      drawingState.yPosLeft += itemLineHeight;
+    });
+  }
+
+  // --- Right Column ---
+  // Name
+  if (data.fullName && typeof data.fullName === 'string' && data.fullName.trim() !== '') {
+    drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, 40, 'right');
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(28).fillColor(CLASSIC_COLORS.nameHeader)
+       .text(data.fullName, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosRight += doc.heightOfString(data.fullName, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 28 });
+  }
+
+  // Role
+  if (data.currentRoleOrStudent && typeof data.currentRoleOrStudent === 'string' && data.currentRoleOrStudent.trim() !== '') {
+    const roleHeight = doc.heightOfString(data.currentRoleOrStudent.toUpperCase(), { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 14 });
+    drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, roleHeight, 'right');
+    doc.font(FONT_FAMILY_SANS).fontSize(14).fillColor(CLASSIC_COLORS.roleHeader)
+       .text(data.currentRoleOrStudent.toUpperCase(), RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, characterSpacing: 1 });
+    drawingState.yPosRight += roleHeight + INTER_SECTION_Y_GAP_PT - 5.64; // Reduced by ~20px as per previous request
+  } else {
+    drawingState.yPosRight += INTER_SECTION_Y_GAP_PT - 5.64;
+  }
+
+  // Work Experience
+  if (data.workExperienceEntries && data.workExperienceEntries.length > 0) {
+    drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, 20, 'right');
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(17).fillColor(CLASSIC_COLORS.sectionTitleColor) // 17pt for section title
+       .text('Work Experience', RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosRight += doc.heightOfString('Work Experience', { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 17 }) + SECTION_TITLE_TO_CONTENT_Y_GAP_PT;
+    
+    data.workExperienceEntries.forEach((exp: WorkExperienceEntry, index: number) => {
+      if (!exp) return;
+
+      // Institution (Company)
+      if (exp.company && typeof exp.company === 'string') {
+        const companyHeight = doc.heightOfString(exp.company, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 14 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, companyHeight, 'right');
+        doc.font(FONT_FAMILY_SANS_BOLD).fontSize(14).fillColor(CLASSIC_COLORS.primaryText) // 14pt for institution
+           .text(exp.company, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += companyHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+
+      // Role
+      if (exp.role && typeof exp.role === 'string') {
+        const roleHeight = doc.heightOfString(exp.role, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 12 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, roleHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(12).fillColor(CLASSIC_COLORS.primaryText) // 12pt for role
+           .text(exp.role, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += roleHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+
+      // Date
+      if (exp.dates && typeof exp.dates === 'string') {
+        const datesHeight = doc.heightOfString(exp.dates, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 10 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, datesHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(10).fillColor(CLASSIC_COLORS.lightText) // 10pt for date
+           .text(exp.dates, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += datesHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+      
+      // Description
+      if (exp.responsibilities && typeof exp.responsibilities === 'string') {
+        const descHeight = doc.heightOfString(exp.responsibilities, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 12, lineGap: 1 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, descHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(12).fillColor(CLASSIC_COLORS.primaryText) // 12pt for description
+           .text(exp.responsibilities, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, lineGap: 1 });
+        drawingState.yPosRight += descHeight;
+      }
+
+      // Add 15px gap between child objects (after the entire entry)
+      if (index < data.workExperienceEntries.length - 1) {
+        drawingState.yPosRight += INTRA_SECTION_ITEM_Y_GAP_WORK_EXP_PT; // ~15px gap
+      }
+    });
+    drawingState.yPosRight += INTER_SECTION_Y_GAP_PT;
+  }
+
+  // Education
+  if (data.educationEntries && data.educationEntries.length > 0) {
+    drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, 20, 'right');
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(17).fillColor(CLASSIC_COLORS.sectionTitleColor) // 17pt for section title
+       .text('Education', RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosRight += doc.heightOfString('Education', { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 17 }) + SECTION_TITLE_TO_CONTENT_Y_GAP_PT;
+
+    data.educationEntries.forEach((edu: EducationEntry, index: number) => {
+      if (!edu) return;
+
+      // Institution
+      if (edu.institution && typeof edu.institution === 'string') {
+        const institutionHeight = doc.heightOfString(edu.institution, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 14 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, institutionHeight, 'right');
+        doc.font(FONT_FAMILY_SANS_BOLD).fontSize(14).fillColor(CLASSIC_COLORS.primaryText) // 14pt for institution
+           .text(edu.institution, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += institutionHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+
+      // Role (Degree)
+      if (edu.degree && typeof edu.degree === 'string') {
+        const degreeHeight = doc.heightOfString(edu.degree, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 12 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, degreeHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(12).fillColor(CLASSIC_COLORS.primaryText) // 12pt for role
+           .text(edu.degree, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += degreeHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+
+      // Date
+      if (edu.graduationYear && typeof edu.graduationYear === 'string') {
+        const yearHeight = doc.heightOfString(edu.graduationYear, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 10 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, yearHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(10).fillColor(CLASSIC_COLORS.lightText) // 10pt for date
+           .text(edu.graduationYear, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += yearHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+
+      // Description
+      if (edu.details && typeof edu.details === 'string' && edu.details.trim() !== '') {
+        const detailsHeight = doc.heightOfString(edu.details, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 12, lineGap: 1 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, detailsHeight, 'right');
+        doc.font(FONT_FAMILY_SANS_ITALIC).fontSize(12).fillColor(CLASSIC_COLORS.primaryText) // 12pt for description
+           .text(edu.details, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, lineGap: 1 });
+        drawingState.yPosRight += detailsHeight;
+      }
+
+      // Add 10px gap between child objects (after the entire entry)
+      if (index < data.educationEntries.length - 1) {
+        drawingState.yPosRight += INTRA_SECTION_ITEM_Y_GAP_PT; // ~10px gap
+      }
+    });
+    drawingState.yPosRight += INTER_SECTION_Y_GAP_PT;
+  }
+
+  // Projects
+  if (data.projectEntries && data.projectEntries.length > 0) {
+    drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, 20, 'right');
+    doc.font(FONT_FAMILY_SANS_BOLD).fontSize(17).fillColor(CLASSIC_COLORS.sectionTitleColor) // 17pt for section title
+       .text('Projects', RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+    drawingState.yPosRight += doc.heightOfString('Projects', { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 17 }) + SECTION_TITLE_TO_CONTENT_Y_GAP_PT;
+
+    data.projectEntries.forEach((proj: ProjectEntry, index: number) => {
+      if (!proj) return;
+
+      // Institution (Project Name)
+      const titleText = proj.name && typeof proj.name === 'string' ? proj.name : 'Untitled Project';
+      const nameHeight = doc.heightOfString(titleText, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 14 });
+      drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, nameHeight, 'right');
+      doc.font(FONT_FAMILY_SANS_BOLD).fontSize(14).fillColor(CLASSIC_COLORS.primaryText) // 14pt for institution
+         .text(titleText, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, continued: !!(proj.link && typeof proj.link === 'string' && proj.link.trim() !== '') });
+      if (proj.link && typeof proj.link === 'string' && proj.link.trim() !== '') {
+        doc.font(FONT_FAMILY_SANS).fontSize(9).fillColor(CLASSIC_COLORS.accentText)
+           .text(' (Link)', { link: proj.link, underline: true, width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+      }
+      drawingState.yPosRight += nameHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+
+      // Date (Technologies)
+      if (proj.technologies && typeof proj.technologies === 'string') {
+        const techText = 'Technologies: ' + proj.technologies;
+        const techHeight = doc.heightOfString(techText, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 10 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, techHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(10).fillColor(CLASSIC_COLORS.lightText) // 10pt for date
+           .text(techText, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT });
+        drawingState.yPosRight += techHeight + INTRA_OBJECT_Y_GAP_PT; // ~15px gap
+      }
+      
+      // Description
+      if (proj.description && typeof proj.description === 'string') {
+        const descHeight = doc.heightOfString(proj.description, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, fontSize: 12, lineGap: 1 });
+        drawingState.yPosRight = pageBreakIfNeeded(drawingState, drawingState.yPosRight, descHeight, 'right');
+        doc.font(FONT_FAMILY_SANS).fontSize(12).fillColor(CLASSIC_COLORS.primaryText) // 12pt for description
+           .text(proj.description, RIGHT_COLUMN_X_START_PT, drawingState.yPosRight, { width: RIGHT_COLUMN_CONTENT_MAX_WIDTH_PT, lineGap: 1 });
+        drawingState.yPosRight += descHeight;
+      }
+
+      // Add 10px gap between child objects (after the entire entry)
+      if (index < data.projectEntries.length - 1) {
+        drawingState.yPosRight += INTRA_SECTION_ITEM_Y_GAP_PT; // ~10px gap
+      }
+    });
+  }
+
+  // Finalize
+  const totalPages = doc.bufferedPageRange().count;
+  for (let i = 0; i < totalPages; i++) {
+    doc.switchToPage(i);
+    doc.rect(0, 0, LEFT_COLUMN_ACTUAL_WIDTH_PT, PAGE_HEIGHT_PT).fill(CLASSIC_COLORS.leftColumnBg);
+    addHeaderBranding({ ...drawingState, currentPage: i + 1 });
+    addFooterPagination(doc, totalPages);
+  }
+}
+
+export async function generateCvPdfAction(formData: CvFormData): Promise<{ pdfBase64: string | null; error?: string }> {
+  try {
+    const doc = new PDFDocument({
+      size: 'A4', 
+      margins: { top: GLOBAL_MARGIN_PT, bottom: GLOBAL_MARGIN_PT, left: 0, right: 0 },
+      bufferPages: true,
+    });
+
+    const stream = new PassThrough();
+    const chunks: Buffer[] = [];
+    
+    doc.pipe(stream);
+    stream.on('data', (chunk) => chunks.push(chunk));
+    
+    await drawClassicCV(doc, formData); 
+    doc.end();
+
+    return new Promise((resolve, reject) => {
+      stream.on('end', () => {
+        const pdfBuffer = Buffer.concat(chunks);
+        resolve({ pdfBase64: pdfBuffer.toString('base64') });
+      });
+      stream.on('error', (err) => {
+        console.error("Error streaming PDF:", err);
+        reject({ pdfBase64: null, error: "Failed to generate PDF stream." });
+      });
+    });
+
+  } catch (error: any) {
+    console.error("Error generating CV PDF with PDFKit:", error);
+    let errorMessage = "An unknown error occurred during PDF generation.";
+    if (error.message) {
+        errorMessage = error.message;
+    } else if (typeof error === 'string') {
+        errorMessage = error;
+    }
+    return { pdfBase64: null, error: errorMessage };
+  }
+}
+
+Instructions:
+
+Do Not Modify the Right Column: The right column code (starting from the comment // --- Right Column --- and including sections like Name, Role, Work Experience, Education, and Projects) is already perfect. Do not change any part of it, including its formatting, gaps, or logic.
+
+Focus on the Left Column: Modify only the left column code (from the comment // --- Left Column --- up to the start of the right column). This includes the Profile Picture, About Me, Skills, and Contact sections. Here are the specific changes I want:
+
+Profile Picture: Increase the size to 60% of the left column width (LEFT_COLUMN_ACTUAL_WIDTH_PT * 0.6) and add a 2pt gold border (#FFD700).
+About Me: Increase the font size to 10pt and add a 5pt line gap between lines in the summary text.
+Skills: Reduce the gap between skill bars to 5px (~1.41pt) and change the progress bar fill color to blue (#0000FF).
+Contact: Increase the font size for both the label and value to 10pt and add a 5px (~1.41pt) gap between contact items.
+Preserve Existing Constants and Structure: Use the existing constants (like LEFT_COLUMN_X_PADDING_PT, INTER_SECTION_Y_GAP_PT, etc.) and maintain the overall structure of the code (e.g., the DrawingState interface, helper functions like pageBreakIfNeeded, etc.).
+Page Number: the page number for page 1 is being displayed in the top left side of page 2.
+
+Output the Full Code: After making the changes to the left column, provide the updated full code, including the untouched right column.
+
+Please provide the updated code with the improvements to the left column while keeping the right column exactly as it is.
