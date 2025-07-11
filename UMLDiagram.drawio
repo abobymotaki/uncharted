@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="1hANYlTXnWamHVLupi1--1" value="Doctors" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="40" width="160" height="268" as="geometry" />
+          <mxGeometry x="50" y="40" width="160" height="242" as="geometry" />
         </mxCell>
         <mxCell id="1hANYlTXnWamHVLupi1--2" value="+ id: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1hANYlTXnWamHVLupi1--1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -34,8 +34,8 @@
         <mxCell id="1hANYlTXnWamHVLupi1--12" value="- getPatientRecords()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1hANYlTXnWamHVLupi1--1">
           <mxGeometry y="216" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="1hANYlTXnWamHVLupi1--29" value="- createPrescription()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1hANYlTXnWamHVLupi1--1">
-          <mxGeometry y="242" width="160" height="26" as="geometry" />
+        <mxCell id="1hANYlTXnWamHVLupi1--51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="1hANYlTXnWamHVLupi1--13" target="1hANYlTXnWamHVLupi1--48">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="1hANYlTXnWamHVLupi1--13" value="Patients" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="270" y="40" width="160" height="242" as="geometry" />
@@ -81,7 +81,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1hANYlTXnWamHVLupi1--30" value="Appointment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="270" y="320" width="230" height="242" as="geometry" />
+          <mxGeometry x="270" y="320" width="230" height="216" as="geometry" />
         </mxCell>
         <mxCell id="1hANYlTXnWamHVLupi1--31" value="+ id: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1hANYlTXnWamHVLupi1--30">
           <mxGeometry y="26" width="230" height="26" as="geometry" />
@@ -106,9 +106,6 @@
         </mxCell>
         <mxCell id="1hANYlTXnWamHVLupi1--34" value="+ getDetails(int appointmentID)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1hANYlTXnWamHVLupi1--30">
           <mxGeometry y="190" width="230" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="1hANYlTXnWamHVLupi1--39" value="- createPrescription(String prescription)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="1hANYlTXnWamHVLupi1--30">
-          <mxGeometry y="216" width="230" height="26" as="geometry" />
         </mxCell>
         <mxCell id="1hANYlTXnWamHVLupi1--41" value="Treatment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="520" y="40" width="160" height="216" as="geometry" />
