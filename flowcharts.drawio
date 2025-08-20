@@ -721,8 +721,25 @@
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-60" value="input number" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="2565" y="1360" width="250" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-62" target="UnXM2AHEOtdo-sz7gdvk-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-66" value="&amp;nbsp;False&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UnXM2AHEOtdo-sz7gdvk-65">
+          <mxGeometry x="-0.1691" y="2" relative="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-68" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-62" target="UnXM2AHEOtdo-sz7gdvk-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-62" value="number &amp;gt; 0" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="2625" y="1480" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-64" value="output &quot;0 Has no multiples&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2840" y="1490" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-67" value="while number &amp;gt; i" style="rhombus;whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="1465" width="200" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
