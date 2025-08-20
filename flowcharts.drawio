@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Page-1" id="N7Pm-M6lshDgP5avCQsC">
-    <mxGraphModel dx="3437" dy="1217" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3189" dy="1043" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -811,7 +811,7 @@
           <mxGeometry x="2330" y="1917.5" width="120" height="62" as="geometry" />
         </mxCell>
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-86" value="LCM and HCF of given numbers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10" y="1535" width="150" height="60" as="geometry" />
+          <mxGeometry x="665" y="1540" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-87" target="UnXM2AHEOtdo-sz7gdvk-88">
           <mxGeometry relative="1" as="geometry" />
