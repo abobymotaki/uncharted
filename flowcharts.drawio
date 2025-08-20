@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.0">
   <diagram name="Page-1" id="N7Pm-M6lshDgP5avCQsC">
-    <mxGraphModel dx="3089" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2926" dy="668" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -701,7 +701,7 @@
           <mxGeometry x="1534.5" y="1935.5" width="160" height="62" as="geometry" />
         </mxCell>
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-52" value="Find the multiples of a given number" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="2180" y="1130" width="170" height="60" as="geometry" />
+          <mxGeometry x="2335" y="1130" width="170" height="60" as="geometry" />
         </mxCell>
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-53" target="UnXM2AHEOtdo-sz7gdvk-54">
           <mxGeometry relative="1" as="geometry" />
@@ -809,6 +809,60 @@
         </mxCell>
         <mxCell id="UnXM2AHEOtdo-sz7gdvk-82" value="Stop" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="2630" y="1937.5" width="120" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-86" value="LCM and HCF of given numbers" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="1535" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-94" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-87" target="UnXM2AHEOtdo-sz7gdvk-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-87" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="1535" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-88" target="UnXM2AHEOtdo-sz7gdvk-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-88" value="input a, b" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="1665" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-89" target="UnXM2AHEOtdo-sz7gdvk-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-93" value="&amp;nbsp;True&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UnXM2AHEOtdo-sz7gdvk-92">
+          <mxGeometry x="-0.0215" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-97" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-89" target="UnXM2AHEOtdo-sz7gdvk-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-100" value="False" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UnXM2AHEOtdo-sz7gdvk-97">
+          <mxGeometry x="-0.2316" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-89" value="a &amp;gt; 0" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="235" y="1770" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-99" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="UnXM2AHEOtdo-sz7gdvk-90" target="UnXM2AHEOtdo-sz7gdvk-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-101" value="False" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UnXM2AHEOtdo-sz7gdvk-99">
+          <mxGeometry x="-0.3304" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-90" value="b &amp;gt; 0" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1770" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-96" value="Output 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="222.5" y="1938.5" width="165" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-98" value="Output 0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;size=10;" vertex="1" parent="1">
+          <mxGeometry x="447.5" y="1937.5" width="165" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UnXM2AHEOtdo-sz7gdvk-102" value="Stop" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="2300" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
