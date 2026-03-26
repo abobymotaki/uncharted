@@ -1,121 +1,125 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2026-03-26T10:00:00Z" agent="Grok" version="24.7">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.6">
   <diagram id="flight-sequence-diagram" name="Getting on a Flight">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#f8f9fa" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#f8f9fa" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <!-- Title -->
-        <mxCell id="title" value="&lt;b&gt;Sequence Diagram: Getting on a Flight&lt;/b&gt;&lt;br&gt;Home → Check-in → Security → Gate → Seat" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;strokeColor=none;fillColor=none;fontFamily=Verdana;" vertex="1" parent="1">
-          <mxGeometry x="50" y="20" width="800" height="40" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;strokeColor=none;fillColor=none;fontFamily=Verdana;" value="&lt;b&gt;Sequence Diagram: Getting on a Flight&lt;/b&gt;&lt;br&gt;Home → Check-in → Security → Gate → Seat" vertex="1">
+          <mxGeometry height="40" width="800" x="50" y="20" as="geometry" />
         </mxCell>
-
-        <!-- Lifelines (Participants) -->
-        <!-- Traveler -->
-        <mxCell id="traveler" value="Traveler" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="80" y="100" width="80" height="620" as="geometry"/>
+        <mxCell id="traveler" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" value="Traveler" vertex="1">
+          <mxGeometry height="620" width="80" x="30" y="100" as="geometry" />
         </mxCell>
-
-        <!-- Home (simplified as starting point) -->
-        <mxCell id="home" value="Home" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=1;fontFamily=Verdana;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="220" y="100" width="80" height="620" as="geometry"/>
-        </mxCell>
-
-        <!-- Check-in Counter -->
-        <mxCell id="checkin" value="Airline Check-in Counter" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="360" y="100" width="100" height="620" as="geometry"/>
-        </mxCell>
-
-        <!-- Security Checkpoint -->
-        <mxCell id="security" value="Security Checkpoint" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="520" y="100" width="100" height="620" as="geometry"/>
-        </mxCell>
-
-        <!-- Gate Agent -->
-        <mxCell id="gate" value="Gate Agent" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="680" y="100" width="90" height="620" as="geometry"/>
-        </mxCell>
-
-        <!-- Aircraft / Seat -->
-        <mxCell id="aircraft" value="Aircraft / Seat" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=1;fontFamily=Verdana;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="820" y="100" width="90" height="620" as="geometry"/>
-        </mxCell>
-
-        <!-- Messages / Arrows -->
-
-        <!-- 1. Prepare at Home -->
-        <mxCell id="msg1" value="Prepare documents &amp; luggage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="home">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-
-        <!-- 2. Arrive at Check-in -->
-        <mxCell id="msg2" value="Arrive at airport &amp; go to check-in" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="checkin">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points"><mxPoint x="300" y="180"/></Array>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-1" edge="1" parent="traveler" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="40.16666666666663" y="119.99999999999989" as="sourcePoint" />
+            <mxPoint x="219.5" y="119.99999999999989" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-
-        <!-- Check-in messages -->
-        <mxCell id="msg3" value="Present ID &amp; booking" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="checkin">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-2" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Grab a Taxi&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="-0.1643" as="geometry">
+            <mxPoint x="15" as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="msg4" value="Issue boarding pass + tag luggage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=open;endFill=0;" edge="1" parent="1" source="checkin" target="traveler">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="home" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=1;fontFamily=Verdana;fontSize=12;" value="Home" vertex="1">
+          <mxGeometry height="620" width="80" x="210" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="msg5" value="Drop off checked luggage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="checkin">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-7" edge="1" parent="1" source="checkin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="home">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Proceed to Security -->
-        <mxCell id="msg6" value="Proceed to security" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;dashed=1;" edge="1" parent="1" source="traveler" target="security">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-8" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Improper Identification&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="-0.0502" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-
-        <!-- Security messages -->
-        <mxCell id="msg7" value="Present boarding pass &amp; ID" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="security">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="checkin" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" value="Airline Check-in Counter" vertex="1">
+          <mxGeometry height="620" width="100" x="360" y="100" as="geometry" />
         </mxCell>
-
-        <!-- Optional Search (Alt fragment simulation with note) -->
-        <mxCell id="alt_note" value="Alt: Additional screening / pat-down / bag search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#b37e00;fontStyle=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="480" y="320" width="180" height="50" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-5" edge="1" parent="checkin" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="50" y="170" as="sourcePoint" />
+            <mxPoint x="209" y="170" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-
-        <mxCell id="msg8" value="Remove items → Pass through scanner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="security">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-6" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Get Boarding Pass&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="0.0147" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="msg9" value="Cleared" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=open;endFill=0;" edge="1" parent="1" source="security" target="traveler">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-3" edge="1" parent="checkin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-40" y="150" />
+              <mxPoint x="-40" y="150" />
+            </Array>
+            <mxPoint x="-110.33333333333348" y="150.0000000000001" as="sourcePoint" />
+            <mxPoint x="49" y="150.0000000000001" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-
-        <!-- Gate -->
-        <mxCell id="msg10" value="Arrive at gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="gate">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-4" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Arrive At Airport&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="-0.0021" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="msg11" value="Scan boarding pass" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="gate" target="traveler">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-15" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="569.67" y="469.9999999999999" as="sourcePoint" />
+            <mxPoint x="250.3366666666665" y="469.9999999999999" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="msg12" value="Boarding approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=open;endFill=0;" edge="1" parent="1" source="gate" target="traveler">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-16" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Passenger doesn&#39;t follow Security Protocol&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="0.0084" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-
-        <!-- Boarding Aircraft -->
-        <mxCell id="msg13" value="Enter aircraft" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="aircraft">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="security" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" value="Security Checkpoint" vertex="1">
+          <mxGeometry height="620" width="100" x="520" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="msg14" value="Locate seat &amp; store luggage" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="aircraft">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-9" edge="1" parent="security" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="50" y="190" as="sourcePoint" />
+            <mxPoint x="204" y="190.0000000000001" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="msg15" value="Sit down &amp; fasten seatbelt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=11;endArrow=block;endFill=1;" edge="1" parent="1" source="traveler" target="aircraft">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-10" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Verify Security&amp;nbsp;&lt;div&gt;&amp;nbsp;(Bag scanning and&amp;nbsp;&lt;/div&gt;&lt;div&gt;human checking)&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0043" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-
-        <!-- End note -->
-        <mxCell id="end_note" value="Ready for departure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1e6e3a;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="780" y="680" width="140" height="40" as="geometry"/>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-13" edge="1" parent="security" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="204" y="429.9999999999999" as="sourcePoint" />
+            <mxPoint x="-449.83333333333337" y="429.9999999999999" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-14" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Flight Already Departed&amp;nbsp;&lt;div&gt;(Passenger was late&lt;/div&gt;&lt;div&gt;for flight)&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0446" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gate" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=2;fontFamily=Verdana;fontSize=12;" value="Gate Agent" vertex="1">
+          <mxGeometry height="620" width="90" x="680" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="aircraft" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=1;shadow=0;strokeWidth=1;fontFamily=Verdana;fontSize=12;" value="Aircraft / Seat" vertex="1">
+          <mxGeometry height="620" width="90" x="820" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="end_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1e6e3a;fontStyle=1;fontSize=12;" value="Ready for departure" vertex="1">
+          <mxGeometry height="40" width="140" x="780" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-11" edge="1" parent="1" source="gate" style="endArrow=classic;html=1;rounded=0;" target="aircraft" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="310" />
+            </Array>
+            <mxPoint x="730" y="330" as="sourcePoint" />
+            <mxPoint x="780" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Id5hKkHOmsdSlWmos4ir-12" connectable="0" parent="Id5hKkHOmsdSlWmos4ir-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;nbsp;Board Plane&amp;nbsp;" vertex="1">
+          <mxGeometry relative="1" x="0.0263" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
