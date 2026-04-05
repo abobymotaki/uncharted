@@ -5,13 +5,30 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="uFGDcdHQ1RENFgSfaJOH-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
-          <mxGeometry height="60" width="30" x="90" y="340" as="geometry" />
+          <mxGeometry height="60" width="30" x="90" y="420" as="geometry" />
         </mxCell>
         <mxCell id="uFGDcdHQ1RENFgSfaJOH-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
           <mxGeometry height="60" width="30" x="90" y="560" as="geometry" />
         </mxCell>
         <mxCell id="uFGDcdHQ1RENFgSfaJOH-3" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=20;" value="Study ForgeAI" vertex="1">
-          <mxGeometry height="570" width="660" x="170" y="240" as="geometry" />
+          <mxGeometry height="460" width="660" x="170" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CRUD Subjects" vertex="1">
+          <mxGeometry height="70" width="140" x="250" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CRUD Notes" vertex="1">
+          <mxGeometry height="70" width="140" x="250" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-8" edge="1" parent="1" source="uFGDcdHQ1RENFgSfaJOH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="uFGDcdHQ1RENFgSfaJOH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-9" connectable="0" parent="uFGDcdHQ1RENFgSfaJOH-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&amp;lt;&amp;lt; Extends &amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0514" y="-1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Use AI" vertex="1">
+          <mxGeometry height="70" width="140" x="250" y="560" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
