@@ -4,6 +4,15 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="90" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="90" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="uFGDcdHQ1RENFgSfaJOH-3" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=20;" value="Study ForgeAI" vertex="1">
+          <mxGeometry height="570" width="660" x="170" y="240" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
