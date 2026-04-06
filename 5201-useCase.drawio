@@ -59,7 +59,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="krCmElkdwVHje2-57cPj-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Generate Study Material" vertex="1">
-          <mxGeometry height="60" width="165" x="417.5" y="550" as="geometry" />
+          <mxGeometry height="60" width="165" x="447.5" y="540" as="geometry" />
         </mxCell>
         <mxCell id="krCmElkdwVHje2-57cPj-16" edge="1" parent="1" source="krCmElkdwVHje2-57cPj-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="uFGDcdHQ1RENFgSfaJOH-7">
           <mxGeometry relative="1" as="geometry" />
