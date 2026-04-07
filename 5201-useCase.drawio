@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="6QjfiArkeHo6nYFeuXp8">
-    <mxGraphModel dx="1873" dy="1093" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3333" dy="1336" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -420,6 +420,159 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="2840" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-102" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;verticalAlign=bottom;labelPosition=center;verticalLabelPosition=top;align=center;size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Student" vertex="1">
+          <mxGeometry height="1132" width="35" x="180" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-103" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialView" vertex="1">
+          <mxGeometry height="1132" width="152" x="340" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-104" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialController" vertex="1">
+          <mxGeometry height="1132" width="189" x="700" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-105" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="NoteRepository" vertex="1">
+          <mxGeometry height="1132" width="150" x="1040" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-106" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="Database" vertex="1">
+          <mxGeometry height="1132" width="150" x="1420" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-107" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialGenerator" vertex="1">
+          <mxGeometry height="1132" width="189" x="1610" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-108" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="IAIService" vertex="1">
+          <mxGeometry height="1132" width="150" x="2125" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-109" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="AIExternalAPI" vertex="1">
+          <mxGeometry height="1132" width="150" x="2538" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-110" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialRepository" vertex="1">
+          <mxGeometry height="1132" width="193" x="2700" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-111" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-102" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-103" value="requestGenerateMaterial(subjectID)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="334" y="1719" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-112" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-103" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-104" value="handleGenerateMaterialRequest(subjectID)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="1773" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-113" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-104" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-105" value="getNotesBySubject(subjectID, userID)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1032" y="1827" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-114" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-105" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-106" value="SELECT * FROM Notes WHERE SubjectID = ...">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1391" y="1881" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-115" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-106" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-105" value="notesData">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1394" y="1935" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-116" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-105" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-104" value="List&lt;Note&gt; notes">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1035" y="1989" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-117" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-104" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-107" value="generateMaterial(notes, MaterialType.Summary, studentUser.StudyPreferences)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1334" y="2043" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-118" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-107" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-108" value="generateStudyContent(notes.Select(n =&gt; n.Content), &quot;Summary&quot;, preferences)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2112" y="2097" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-119" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-108" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-109" value="POST /generate">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2521" y="2151" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-120" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-109" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-108" value="generatedContent">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2524" y="2205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-121" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-108" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-107" value="string generatedContent">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2115" y="2259" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-122" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-107" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-110" value="save(new StudyMaterial(...))">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2322" y="2313" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-123" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-110" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-106" value="INSERT INTO StudyMaterials (...)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2216" y="2367" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-124" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-106" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-110" value="success">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2213" y="2421" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-125" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-110" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-107" value="savedStudyMaterial">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2325" y="2475" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-126" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-107" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-104" value="StudyMaterial newMaterial">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1337" y="2529" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-127" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-104" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-103" value="displayMaterial(newMaterial)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="683" y="2583" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-128" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-103" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-102" value="displayStudyMaterial">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="337" y="2637" />
             </Array>
           </mxGeometry>
         </mxCell>
