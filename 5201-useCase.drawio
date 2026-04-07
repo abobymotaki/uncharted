@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="6QjfiArkeHo6nYFeuXp8">
-    <mxGraphModel dx="3333" dy="1336" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="875" dy="414" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -429,6 +429,9 @@
         <mxCell id="sxoIvnfKEqJ2H_wHhFtW-103" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialView" vertex="1">
           <mxGeometry height="1132" width="152" x="340" y="1610" as="geometry" />
         </mxCell>
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-129" parent="sxoIvnfKEqJ2H_wHhFtW-103" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="110" width="10" x="71" y="90" as="geometry" />
+        </mxCell>
         <mxCell id="sxoIvnfKEqJ2H_wHhFtW-104" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialController" vertex="1">
           <mxGeometry height="1132" width="189" x="700" y="1600" as="geometry" />
         </mxCell>
@@ -450,18 +453,20 @@
         <mxCell id="sxoIvnfKEqJ2H_wHhFtW-110" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;fillColor=light-dark(#eeeeee,#1f2020);strokeColor=light-dark(#999999,#cccccc);fontColor=light-dark(#333333,#cccccc);" value="StudyMaterialRepository" vertex="1">
           <mxGeometry height="1132" width="193" x="2700" y="1610" as="geometry" />
         </mxCell>
-        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-111" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-102" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-103" value="requestGenerateMaterial(subjectID)">
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-111" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-102" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" value="requestGenerateMaterial(subjectID)">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="334" y="1719" />
             </Array>
+            <mxPoint x="410" y="1719" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-112" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-103" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-104" value="handleGenerateMaterialRequest(subjectID)">
+        <mxCell id="sxoIvnfKEqJ2H_wHhFtW-112" edge="1" parent="1" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-104" value="handleGenerateMaterialRequest(subjectID)">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="680" y="1773" />
             </Array>
+            <mxPoint x="420" y="1773" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="sxoIvnfKEqJ2H_wHhFtW-113" edge="1" parent="1" source="sxoIvnfKEqJ2H_wHhFtW-104" style="verticalAlign=bottom;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;endArrow=block;" target="sxoIvnfKEqJ2H_wHhFtW-105" value="getNotesBySubject(subjectID, userID)">
