@@ -1,0 +1,1206 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Level 0 - context" id="zerUkK1fYzwaGlkvJ-kA">
+    <mxGraphModel dx="1324" dy="1161" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Level 0: context diagram" vertex="1">
+          <mxGeometry height="30" width="1600" y="-90" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving" vertex="1">
+          <mxGeometry height="20" width="1600" y="-55" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in)" vertex="1">
+          <mxGeometry height="70" width="190" x="95" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user)" vertex="1">
+          <mxGeometry height="70" width="190" x="95" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User)" vertex="1">
+          <mxGeometry height="70" width="190" x="95" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;b&gt;0&lt;/b&gt;&lt;br&gt;Venue Booking system&lt;br&gt;(Odoo module venue_booking)" vertex="1">
+          <mxGeometry height="92" width="250" x="825" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator)" vertex="1">
+          <mxGeometry height="70" width="190" x="1615" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&#39;s email inbox" vertex="1">
+          <mxGeometry height="70" width="190" x="1615" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Odoo scheduler&lt;br&gt;(cron)" vertex="1">
+          <mxGeometry height="70" width="190" x="1615" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" edge="1" parent="1" source="c5" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1.000;exitY=0.333;entryX=0.000;entryY=0.143;" target="c8" value="search filters, sign-up details">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" edge="1" parent="1" source="c8" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.000;exitY=0.286;entryX=1.000;entryY=0.667;" target="c5" value="venues by category, availability, prices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" edge="1" parent="1" source="c6" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1.000;exitY=0.333;entryX=0.000;entryY=0.429;" target="c8" value="booking request, menu choices, cancel request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" edge="1" parent="1" source="c8" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.000;exitY=0.571;entryX=1.000;entryY=0.667;" target="c6" value="booking status, menu board, budget bar, invoices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" edge="1" parent="1" source="c7" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1.000;exitY=0.333;entryX=0.000;entryY=0.714;" target="c8" value="booking edits, confirm / cancel / invoice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" edge="1" parent="1" source="c8" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.000;exitY=0.857;entryX=1.000;entryY=0.667;" target="c7" value="booking list, calendar, invoices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" edge="1" parent="1" source="c9" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.000;exitY=0.500;entryX=1.000;entryY=0.250;" target="c8" value="venues, food, categories, block / unblock">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" edge="1" parent="1" source="c8" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1.000;exitY=0.500;entryX=0.000;entryY=0.500;" target="c10" value="confirmation + cancellation emails">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" edge="1" parent="1" source="c11" style="orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.000;exitY=0.500;entryX=1.000;entryY=0.750;" target="c8" value="hourly tick">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-1" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Taki Ahmed: core booking logic (models/venue_booking.py, venue_booking_menu_line.py, account_move.py)" vertex="1">
+          <mxGeometry height="30" width="1600" x="20" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-2" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving · * = drawn more than once to keep lines short (same thing)" vertex="1">
+          <mxGeometry height="34" width="1700" x="20" y="845" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-3" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;4.1 Check request&lt;/b&gt;&lt;br&gt;_create_from_website()&lt;br&gt;blocked? future? capacity? budget?" vertex="1">
+          <mxGeometry height="132" width="270" x="620" y="922" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-4" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#82b366;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Zeyan: 3 Request a booking&lt;/b&gt;&lt;br&gt;(website controller)" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="917" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-5" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d79b00;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Syed: availability helper&lt;/b&gt;&lt;br&gt;room._is_available()&lt;br&gt;+ categories wizard *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-6" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="926" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-271" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;labelPadding=0 4;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="1280.0000000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-7" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1004" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-8" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-3" value="room, start, end, guests, budget, event type">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-9" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-4" value="booking or error message">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-10" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.750;" target="CGqOxbLfTZnFJnyZdAom-3" value="free? (start, end + buffers)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-11" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-3" value="venue_blocked">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-12" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-3" value="capacity, published">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-13" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;4.2 Create + number&lt;/b&gt;&lt;br&gt;create(), _lock_rooms()&lt;br&gt;_check_room_is_free()" vertex="1">
+          <mxGeometry height="132" width="270" x="620" y="1128" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-14" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#b85450;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Sarath: back-office buttons&lt;/b&gt;&lt;br&gt;+ email templates *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="1162" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-15" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D8&lt;/b&gt; &amp;nbsp;Booking numbers VB/YYYY/NNNN&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;ir.sequence&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1132" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-16" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-17" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-13" value="staff-created booking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-18" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-13" value="next reference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-19" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-16" value="new booking (draft)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-20" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;4.3 Confirm&lt;/b&gt;&lt;br&gt;action_confirm()&lt;br&gt;_notify_customer()" vertex="1">
+          <mxGeometry height="132" width="270" x="620" y="1334" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-21" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#b85450;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Sarath: back-office buttons&lt;/b&gt;&lt;br&gt;+ email templates *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-22" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1338" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-23" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D7*&lt;/b&gt; &amp;nbsp;Email templates, chatter, outgoing mail&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;mail.template, mail.message, mail.mail&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1416" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-24" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-20" value="Confirm button">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-25" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-22" value="state = Booked">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-26" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-23" value="confirmation email + chatter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-27" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;4.4 Compute amounts&lt;/b&gt;&lt;br&gt;venue + menu = total&lt;br&gt;over budget?" vertex="1">
+          <mxGeometry height="132" width="270" x="620" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-28" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1544" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-29" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1622" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-30" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-28" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-27" value="hours, price/hour, budget">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-31" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-27" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-28" value="venue, menu, total, over budget">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-32" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-29" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.750;" target="CGqOxbLfTZnFJnyZdAom-27" value="line subtotals">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-33" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;7.1 Add / remove food&lt;/b&gt;&lt;br&gt;_add_foods(), _add_food_categories()&lt;br&gt;_remove_foods()" vertex="1">
+          <mxGeometry height="210" width="270" x="620" y="1746" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-34" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Saad: portal cancel&lt;/b&gt;&lt;br&gt;+ menu boards *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="1780" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-35" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d79b00;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Syed: availability helper&lt;/b&gt;&lt;br&gt;room._is_available()&lt;br&gt;+ categories wizard *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="1858" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-36" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1750" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-37" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1828" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-38" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="1906" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-39" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-33" value="add / remove dish or category">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-40" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-35" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-33" value="wizard: categories">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-41" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-33" value="food price, category">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-42" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-37" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-33" value="guests, budget, menu deadline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-43" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-33" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.750;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-38" value="menu lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-44" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;6.1 Cancel&lt;/b&gt;&lt;br&gt;_cancel_by_customer() / action_cancel()&lt;br&gt;_do_cancel()" vertex="1">
+          <mxGeometry height="210" width="270" x="620" y="2030" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-45" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Saad: portal cancel&lt;/b&gt;&lt;br&gt;+ menu boards *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="2064" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-46" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#b85450;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Sarath: back-office buttons&lt;/b&gt;&lt;br&gt;+ email templates *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="2142" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-47" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2034" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-48" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2112" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-49" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D7*&lt;/b&gt; &amp;nbsp;Email templates, chatter, outgoing mail&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;mail.template, mail.message, mail.mail&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2190" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-50" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-44" value="customer cancel + reason">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-51" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-44" value="Cancel button">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-52" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-47" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-44" value="free-cancellation hours">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-53" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-48" value="cancelled, reason, time">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-54" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.750;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-49" value="cancellation email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-55" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;9 Create invoice&lt;/b&gt;&lt;br&gt;action_create_invoice()" vertex="1">
+          <mxGeometry height="210" width="270" x="620" y="2314" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-56" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#b85450;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Sarath: back-office buttons&lt;/b&gt;&lt;br&gt;+ email templates *" vertex="1">
+          <mxGeometry height="64" width="250" x="20" y="2387" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-57" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2318" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-58" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D9&lt;/b&gt; &amp;nbsp;Invoice products (Venue Hire, Catering)&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;product.product&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2396" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-59" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D6&lt;/b&gt; &amp;nbsp;Invoices&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;account.move&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2474" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-60" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-56" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-55" value="Create Invoice button">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-61" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-57" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-55" value="menu lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-62" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-58" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-55" value="Venue Hire, Event Catering">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-63" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-55" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.750;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-59" value="draft invoice (linked)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-64" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;13 Mark Done&lt;/b&gt;&lt;br&gt;_cron_mark_done()" vertex="1">
+          <mxGeometry height="92" width="270" x="620" y="2579" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-65" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Odoo scheduler&lt;br&gt;(cron)" vertex="1">
+          <mxGeometry height="66" width="250" x="20" y="2592" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-66" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1280" y="2602" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-67" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-65" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-64" value="hourly">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-68" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-66" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-64" value="booked + ended">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-69" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-64" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-66" value="state = Done">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-70" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="CGqOxbLfTZnFJnyZdAom-13" value="valid booking values">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-71" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="CGqOxbLfTZnFJnyZdAom-20" value="website booking: confirm now">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-72" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="200" x="1680" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-73" parent="1" style="rounded=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Saad Ali" vertex="1">
+          <mxGeometry height="24" width="170" x="1680" y="934" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-74" parent="1" style="rounded=1;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Sarath Lal" vertex="1">
+          <mxGeometry height="24" width="170" x="1680" y="964" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-75" parent="1" style="rounded=1;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="Syed Ayaan Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="1680" y="994" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-76" parent="1" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Taki Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="1680" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-77" parent="1" style="rounded=1;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Zeyan Shahid" vertex="1">
+          <mxGeometry height="24" width="170" x="1680" y="1054" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-78" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Zeyan Shahid: public website (controllers/main.py, views/website_templates.xml)" vertex="1">
+          <mxGeometry height="30" width="1600" x="2140" y="-240" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-79" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving · * = drawn more than once to keep lines short (same thing)" vertex="1">
+          <mxGeometry height="34" width="1700" x="2140" y="-205" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-80" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;2.1 Read search&lt;/b&gt;&lt;br&gt;_read_search()&lt;br&gt;date, times, guests, budget" vertex="1">
+          <mxGeometry height="92" width="270" x="2740" y="-147" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-81" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2140" y="-134" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-82" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-81" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-80" value="query string filters">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-83" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;2.2 List venues&lt;/b&gt;&lt;br&gt;GET /venues&lt;br&gt;by category + status" vertex="1">
+          <mxGeometry height="132" width="270" x="2740" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-84" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d79b00;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Syed: _is_available()&lt;/b&gt;&lt;br&gt;_to_utc(), _format_local()" vertex="1">
+          <mxGeometry height="64" width="250" x="2140" y="-5" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-85" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2140" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-86" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3400" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-87" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-84" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-83" value="free / booked">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-88" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-83" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-85" value="cards: Available, Booked, Over budget">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-89" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-86" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-83" value="published venues, prices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-90" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;2.3 Venue page&lt;/b&gt;&lt;br&gt;GET /venues/&amp;lt;venue&amp;gt;&lt;br&gt;photos, booked times" vertex="1">
+          <mxGeometry height="210" width="270" x="2740" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-91" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2140" y="239" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-92" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#b85450;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Sarath: sign up / log in&lt;/b&gt;&lt;br&gt;+ rule: published venues only" vertex="1">
+          <mxGeometry height="64" width="250" x="2140" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-93" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3400" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-94" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3400" y="288" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-95" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3400" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-96" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-90" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-91" value="venue page + booking form">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-97" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-90" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-92" value="Log in to book (redirect)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-98" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-93" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-90" value="description, photo, capacity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-99" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-94" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-90" value="busy times (sudo, times only)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-100" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-95" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.750;" target="CGqOxbLfTZnFJnyZdAom-90" value="blocked?">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-101" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;3 Book&lt;/b&gt;&lt;br&gt;POST /venues/&amp;lt;venue&amp;gt;/book&lt;br&gt;(login required)" vertex="1">
+          <mxGeometry height="210" width="270" x="2740" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-102" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user)" vertex="1">
+          <mxGeometry height="66" width="250" x="2140" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-103" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: 4 Create + confirm&lt;/b&gt;&lt;br&gt;_create_from_website()" vertex="1">
+          <mxGeometry height="64" width="250" x="2140" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-104" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Saad: booking page&lt;/b&gt;&lt;br&gt;/my/bookings/&amp;lt;id&amp;gt;?booked=1" vertex="1">
+          <mxGeometry height="64" width="250" x="2140" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-105" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-102" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.167;" target="CGqOxbLfTZnFJnyZdAom-101" value="booking form">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-106" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-101" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-102" value="error, form kept">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-107" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-101" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-103" value="booking request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-108" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-103" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-101" value="booking or error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-109" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-101" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.833;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-104" value="redirect">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-110" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-80" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="CGqOxbLfTZnFJnyZdAom-83" value="search window">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-111" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-80" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.95;entryX=1;entryY=0.05;" target="CGqOxbLfTZnFJnyZdAom-90" value="search window">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3076" y="-60" />
+              <mxPoint x="3076" y="216" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-112" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="200" x="3800" y="-140" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-113" parent="1" style="rounded=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Saad Ali" vertex="1">
+          <mxGeometry height="24" width="170" x="3800" y="-116" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-114" parent="1" style="rounded=1;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Sarath Lal" vertex="1">
+          <mxGeometry height="24" width="170" x="3800" y="-86" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-115" parent="1" style="rounded=1;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="Syed Ayaan Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="3800" y="-56" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-116" parent="1" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Taki Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="3800" y="-26" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-117" parent="1" style="rounded=1;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Zeyan Shahid" vertex="1">
+          <mxGeometry height="24" width="170" x="3800" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-118" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Saad Ali: customer portal + menu boards (controllers/portal.py, portal_templates.xml, menu_board JS)" vertex="1">
+          <mxGeometry height="30" width="1600" x="2010" y="879" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-119" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving · * = drawn more than once to keep lines short (same thing)" vertex="1">
+          <mxGeometry height="34" width="1700" x="2010" y="914" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-120" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;5.1 Home counter&lt;/b&gt;&lt;br&gt;/my/home" vertex="1">
+          <mxGeometry height="92" width="270" x="2610" y="972" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-121" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2010" y="985" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-122" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-123" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-121" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-120" value="open My Account">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-124" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-122" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-120" value="count of own bookings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-125" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;5.2 My bookings&lt;/b&gt;&lt;br&gt;/my/bookings&lt;br&gt;Upcoming / Past / Cancelled" vertex="1">
+          <mxGeometry height="92" width="270" x="2610" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-126" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2010" y="1113" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-127" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1123" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-128" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-126" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-125" value="filter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-129" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-125" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-126" value="booking list">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-130" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-127" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-125" value="own bookings (record rule)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-131" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;5.3 Booking page&lt;/b&gt;&lt;br&gt;/my/bookings/&amp;lt;id&amp;gt;&lt;br&gt;budget bar, invoices, menu" vertex="1">
+          <mxGeometry height="132" width="270" x="2610" y="1247" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-132" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#82b366;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Zeyan: new booking&lt;/b&gt;&lt;br&gt;(redirect, booked=1)" vertex="1">
+          <mxGeometry height="64" width="250" x="2010" y="1242" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-133" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2010" y="1319" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-134" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1251" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-135" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D6&lt;/b&gt; &amp;nbsp;Invoices&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;account.move&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1329" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-136" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-132" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-131" value="booking id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-137" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-133" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-131" value="open booking / email link">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-138" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-131" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.750;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-133" value="booking page">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-139" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-134" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-131" value="times, amounts, state">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-140" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-135" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-131" value="invoices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-141" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;6.2 Cancel request&lt;/b&gt;&lt;br&gt;POST .../cancel" vertex="1">
+          <mxGeometry height="132" width="270" x="2610" y="1453" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-142" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2010" y="1447" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-143" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: _cancel_by_customer()&lt;/b&gt;&lt;br&gt;_add_foods(), _remove_foods()&lt;br&gt;_can_edit_menu() *" vertex="1">
+          <mxGeometry height="64" width="250" x="2010" y="1526" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-144" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1496" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-145" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-142" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-141" value="Cancel + reason">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-146" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-141" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-143" value="cancel request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-147" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-144" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-141" value="blocked?">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-148" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;7.2 Portal menu board&lt;/b&gt;&lt;br&gt;/menu, POST /menu/update&lt;br&gt;drag + drop (Interaction)" vertex="1">
+          <mxGeometry height="132" width="270" x="2610" y="1659" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-149" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" x="2010" y="1653" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-150" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: _cancel_by_customer()&lt;/b&gt;&lt;br&gt;_add_foods(), _remove_foods()&lt;br&gt;_can_edit_menu() *" vertex="1">
+          <mxGeometry height="64" width="250" x="2010" y="1732" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-151" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2*&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1663" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-152" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1741" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-153" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-149" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.250;" target="CGqOxbLfTZnFJnyZdAom-148" value="drag dish, Add / Remove, categories">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-154" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-148" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-149" value="refreshed board (fetch)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-155" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-148" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.750;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-150" value="add / remove foods">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-156" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-151" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-148" value="dishes, photos, prices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-157" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-152" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-148" value="chosen lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-158" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;7.3 Back-office menu board&lt;/b&gt;&lt;br&gt;venue_menu_board widget&lt;br&gt;(OWL)" vertex="1">
+          <mxGeometry height="132" width="270" x="2610" y="1865" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-159" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#b85450;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Sarath: booking form&lt;/b&gt;&lt;br&gt;(Food Menu tab hosts the widget)" vertex="1">
+          <mxGeometry height="64" width="250" x="2010" y="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-160" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User)" vertex="1">
+          <mxGeometry height="66" width="250" x="2010" y="1937" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-161" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2*&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1869" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-162" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="3270" y="1947" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-163" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-159" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-158" value="booking form">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-164" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-160" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-158" value="drag dish, servings, price">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-165" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-161" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-158" value="catalogue (orm.searchRead)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-166" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-158" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-162" value="menu lines (on Save)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-167" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="200" x="3670" y="979" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-168" parent="1" style="rounded=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Saad Ali" vertex="1">
+          <mxGeometry height="24" width="170" x="3670" y="1003" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-169" parent="1" style="rounded=1;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Sarath Lal" vertex="1">
+          <mxGeometry height="24" width="170" x="3670" y="1033" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-170" parent="1" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Taki Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="3670" y="1063" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-171" parent="1" style="rounded=1;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Zeyan Shahid" vertex="1">
+          <mxGeometry height="24" width="170" x="3670" y="1093" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-172" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Syed Ayaan Ahmed: catalogue, customers, wizard (venue_room*, venue_food*, res_partner, wizard)" vertex="1">
+          <mxGeometry height="30" width="1600" x="4410" y="-200" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-173" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving · * = drawn more than once to keep lines short (same thing)" vertex="1">
+          <mxGeometry height="34" width="1700" x="4410" y="-165" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-174" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;10.1 Venues + venue categories&lt;/b&gt;&lt;br&gt;(category fills default buffers)" vertex="1">
+          <mxGeometry height="92" width="270" x="5010" y="-107" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-175" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator) *" vertex="1">
+          <mxGeometry height="66" width="250" x="4410" y="-94" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-176" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="-84" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-177" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-175" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-174" value="venues, prices, buffers, photos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-178" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-174" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-176" value="venues">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-179" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;10.2 Food + food categories&lt;/b&gt;&lt;br&gt;Food kanban: a column per category" vertex="1">
+          <mxGeometry height="92" width="270" x="5010" y="21" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-180" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator) *" vertex="1">
+          <mxGeometry height="66" width="250" x="4410" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-181" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-182" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-180" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-179" value="dishes, categories, photos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-183" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-179" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-181" value="food">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-184" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;11 Block / unblock customer&lt;/b&gt;&lt;br&gt;action_venue_block() (managers)" vertex="1">
+          <mxGeometry height="132" width="270" x="5010" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-185" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator) *" vertex="1">
+          <mxGeometry height="66" width="250" x="4410" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-186" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#82b366;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Zeyan, Taki, Saad&lt;/b&gt;&lt;br&gt;(read the blocked flag)" vertex="1">
+          <mxGeometry height="64" width="250" x="4410" y="241" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-187" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-188" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D7&lt;/b&gt; &amp;nbsp;Email templates, chatter, outgoing mail&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;mail.template, mail.message, mail.mail&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-189" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-185" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-184" value="block + reason / unblock">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-190" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-184" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-186" value="blocked flag (kept in D5)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-191" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-184" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-187" value="venue_blocked, reason">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-192" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-184" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-188" value="chatter note">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-193" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;Availability + time helpers&lt;/b&gt;&lt;br&gt;_is_available(), _to_utc()&lt;br&gt;_to_local(), _format_local()" vertex="1">
+          <mxGeometry height="132" width="270" x="5010" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-194" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#82b366;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Zeyan: /venues pages&lt;/b&gt;" vertex="1">
+          <mxGeometry height="64" width="250" x="4410" y="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-195" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: booking checks&lt;/b&gt;&lt;br&gt;_add_food_categories() *" vertex="1">
+          <mxGeometry height="64" width="250" x="4410" y="447" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-196" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="378" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-197" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="456" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-198" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-194" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.200;" target="CGqOxbLfTZnFJnyZdAom-193" value="date + local times">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-199" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-193" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.400;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-194" value="free / busy, local times">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-200" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-195" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.600;" target="CGqOxbLfTZnFJnyZdAom-193" value="start, end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-201" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-193" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.800;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-195" value="free / busy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-202" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-196" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-193" value="timezone, buffers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-203" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-197" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-193" value="busy ranges">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-204" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;Booking history&lt;/b&gt;&lt;br&gt;Venue Bookings tab + smart button" vertex="1">
+          <mxGeometry height="92" width="270" x="5010" y="561" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-205" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User) *" vertex="1">
+          <mxGeometry height="66" width="250" x="4410" y="574" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-206" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5670" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-207" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-205" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-204" value="open customer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-208" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-204" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-205" value="history + count">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-209" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-206" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-204" value="customer&#39;s bookings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-210" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;7.4 Add / remove categories&lt;/b&gt;&lt;br&gt;wizard on the booking form" vertex="1">
+          <mxGeometry height="132" width="270" x="5010" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-211" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User) *" vertex="1">
+          <mxGeometry height="66" width="250" x="4410" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-212" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: booking checks&lt;/b&gt;&lt;br&gt;_add_food_categories() *" vertex="1">
+          <mxGeometry height="64" width="250" x="4410" y="781" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-213" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-211" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-210" value="categories, add / remove">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-214" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-210" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-212" value="selected categories">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-215" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="200" x="6070" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-216" parent="1" style="rounded=1;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="Syed Ayaan Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="6070" y="-76" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-217" parent="1" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Taki Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="6070" y="-46" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-218" parent="1" style="rounded=1;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Zeyan Shahid" vertex="1">
+          <mxGeometry height="24" width="170" x="6070" y="-16" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-219" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Sarath Lal: security, data, emails, back office (security/, data/, venue_booking_views, menus)" vertex="1">
+          <mxGeometry height="30" width="1600" x="4330" y="1192" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-220" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving · * = drawn more than once to keep lines short (same thing)" vertex="1">
+          <mxGeometry height="34" width="1700" x="4330" y="1227" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-221" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;1 Free sign-up + log in&lt;/b&gt;&lt;br&gt;auth_signup, website: b2c" vertex="1">
+          <mxGeometry height="92" width="270" x="4930" y="1285" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-222" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in)" vertex="1">
+          <mxGeometry height="66" width="250" x="4330" y="1298" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-223" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5*&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="1308" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-224" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-222" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-221" value="name, email, password">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-225" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-221" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-223" value="portal user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-226" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;Access control&lt;/b&gt;&lt;br&gt;groups, access rights,&lt;br&gt;record rules" vertex="1">
+          <mxGeometry height="92" width="270" x="4930" y="1413" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-227" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator)" vertex="1">
+          <mxGeometry height="66" width="250" x="4330" y="1426" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-228" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5*&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="1436" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-229" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-227" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-226" value="staff groups">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-230" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-226" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-228" value="user groups">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-231" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;Starter data (install)&lt;/b&gt;&lt;br&gt;sequence, products, categories,&lt;br&gt;8 venues, 26 dishes + photos" vertex="1">
+          <mxGeometry height="288" width="270" x="4930" y="1560" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-232" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D8&lt;/b&gt; &amp;nbsp;Booking numbers VB/YYYY/NNNN&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;ir.sequence&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="1564" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-233" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D9&lt;/b&gt; &amp;nbsp;Invoice products (Venue Hire, Catering)&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;product.product&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="1642" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-234" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="1720" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-235" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="1798" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-236" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-231" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.200;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-232" value="VB/%(year)s/ sequence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-237" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-231" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.400;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-233" value="Venue Hire, Event Catering">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-238" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-231" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.600;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-234" value="categories, venues, photos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-239" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-231" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.800;entryX=0;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-235" value="categories, dishes, photos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-240" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;8 Back-office booking screens&lt;/b&gt;&lt;br&gt;list, form, calendar, search,&lt;br&gt;buttons" vertex="1">
+          <mxGeometry height="288" width="270" x="4930" y="1922" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-241" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User)" vertex="1">
+          <mxGeometry height="66" width="250" x="4330" y="1916" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-242" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: confirm, cancel,&lt;/b&gt;&lt;br&gt;invoice, mark done *" vertex="1">
+          <mxGeometry height="64" width="250" x="4330" y="1995" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-243" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#9673a6;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Saad: menu board widget&lt;/b&gt;" vertex="1">
+          <mxGeometry height="64" width="250" x="4330" y="2073" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-244" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d79b00;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Syed: categories wizard&lt;/b&gt;" vertex="1">
+          <mxGeometry height="64" width="250" x="4330" y="2151" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-245" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="2043" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-246" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-241" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.200;" target="CGqOxbLfTZnFJnyZdAom-240" value="create / edit, filters">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-247" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-240" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.400;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-242" value="button clicks">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-248" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-240" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.600;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-243" value="Food Menu tab">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-249" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-240" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.800;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-244" value="Add / Remove Food Categories">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-250" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-245" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-240" value="list, form, calendar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-251" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-240" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-245" value="saved booking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-252" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;12 Booking emails&lt;/b&gt;&lt;br&gt;confirmed / cancelled&lt;br&gt;templates" vertex="1">
+          <mxGeometry height="132" width="270" x="4930" y="2284" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-253" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: confirm, cancel,&lt;/b&gt;&lt;br&gt;invoice, mark done *" vertex="1">
+          <mxGeometry height="64" width="250" x="4330" y="2279" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-254" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&#39;s email inbox" vertex="1">
+          <mxGeometry height="66" width="250" x="4330" y="2356" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-255" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D7&lt;/b&gt; &amp;nbsp;Email templates, chatter, outgoing mail&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;mail.template, mail.message, mail.mail&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="5590" y="2327" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-256" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-253" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-252" value="booking confirmed / cancelled">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-257" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-252" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-254" value="email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-258" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-255" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-252" value="template">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-259" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-252" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.667;" target="CGqOxbLfTZnFJnyZdAom-255" value="queued mail + chatter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-260" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;Hourly scheduled action&lt;/b&gt;&lt;br&gt;ir.cron" vertex="1">
+          <mxGeometry height="132" width="270" x="4930" y="2490" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-261" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Odoo scheduler&lt;br&gt;(cron)" vertex="1">
+          <mxGeometry height="66" width="250" x="4330" y="2484" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-262" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#d6b656;fontColor=#555555;fontSize=11;" value="&lt;b&gt;Taki: confirm, cancel,&lt;/b&gt;&lt;br&gt;invoice, mark done *" vertex="1">
+          <mxGeometry height="64" width="250" x="4330" y="2563" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-263" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-261" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="CGqOxbLfTZnFJnyZdAom-260" value="every hour">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-264" edge="1" parent="1" source="CGqOxbLfTZnFJnyZdAom-260" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.500;" target="CGqOxbLfTZnFJnyZdAom-262" value="_cron_mark_done()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-265" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;fillColor=#fffbe6;strokeColor=#d6b656;spacing=8;" value="Record rules filter every read: customers see only their own bookings and menu lines; visitors see only published venues; staff see their companies&#39; data." vertex="1">
+          <mxGeometry height="50" width="800" x="4330" y="2694" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-266" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="200" x="5990" y="1292" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-267" parent="1" style="rounded=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Saad Ali" vertex="1">
+          <mxGeometry height="24" width="170" x="5990" y="1316" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-268" parent="1" style="rounded=1;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Sarath Lal" vertex="1">
+          <mxGeometry height="24" width="170" x="5990" y="1346" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-269" parent="1" style="rounded=1;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="Syed Ayaan Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="5990" y="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="CGqOxbLfTZnFJnyZdAom-270" parent="1" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Taki Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="5990" y="1406" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Level 1 - master" id="Ee-dIsPu-3Ff6buSwJbe">
+    <mxGraphModel grid="1" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=16;fontStyle=1;whiteSpace=wrap;" value="Level 1: the whole module (master)" vertex="1">
+          <mxGeometry height="30" width="1600" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="Rounded = process (colour = owner) · thick blue = outside the module · open box = data store (D1-D9 = Odoo tables) · grey dashed = another team member&#39;s process · arrows = data moving · * = drawn more than once to keep lines short (same thing)" vertex="1">
+          <mxGeometry height="34" width="1700" y="-65" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;1&lt;/b&gt;&lt;br&gt;Sign up + log in" vertex="1">
+          <mxGeometry height="92" width="270" x="600" y="-7" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in) *" vertex="1">
+          <mxGeometry height="66" width="250" y="6" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5*&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="16" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" edge="1" parent="1" source="c6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c5" value="name, email, password">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" edge="1" parent="1" source="c5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c7" value="new portal user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;2&lt;/b&gt;&lt;br&gt;Browse + filter venues&lt;br&gt;/venues" vertex="1">
+          <mxGeometry height="132" width="270" x="600" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Visitor&lt;br&gt;(not logged in) *" vertex="1">
+          <mxGeometry height="66" width="250" y="173" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="144" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="222" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" edge="1" parent="1" source="c11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.333;" target="c10" value="date, times, guests, budget">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" edge="1" parent="1" source="c10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.667;" target="c11" value="venue cards + status">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" edge="1" parent="1" source="c12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="c10" value="published venues, prices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" edge="1" parent="1" source="c13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="c10" value="busy times">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="&lt;b&gt;3&lt;/b&gt;&lt;br&gt;Request a booking&lt;br&gt;POST /venues/&amp;lt;id&amp;gt;/book" vertex="1">
+          <mxGeometry height="92" width="270" x="600" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" edge="1" parent="1" source="c19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c18" value="booking form">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;4&lt;/b&gt;&lt;br&gt;Create + confirm booking&lt;br&gt;(checks, number, confirm)" vertex="1">
+          <mxGeometry height="288" width="270" x="600" y="474" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5*&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="556" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D8&lt;/b&gt; &amp;nbsp;Booking numbers VB/YYYY/NNNN&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;ir.sequence&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="634" as="geometry" />
+        </mxCell>
+        <mxCell id="c25" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="712" as="geometry" />
+        </mxCell>
+        <mxCell id="c26" edge="1" parent="1" source="c22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.200;" target="c21" value="blocked flag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c27" edge="1" parent="1" source="c23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.400;" target="c21" value="capacity, price, buffers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c28" edge="1" parent="1" source="c24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.600;" target="c21" value="next reference">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c29" edge="1" parent="1" source="c21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.800;entryX=0;entryY=0.500;" target="c25" value="confirmed booking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c30" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;12&lt;/b&gt;&lt;br&gt;Email the customer&lt;br&gt;(templates)" vertex="1">
+          <mxGeometry height="92" width="270" x="600" y="817" as="geometry" />
+        </mxCell>
+        <mxCell id="c31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&#39;s email inbox" vertex="1">
+          <mxGeometry height="66" width="250" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="c32" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D7&lt;/b&gt; &amp;nbsp;Email templates, chatter, outgoing mail&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;mail.template, mail.message, mail.mail&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="c33" edge="1" parent="1" source="c30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="c31" value="email">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c34" edge="1" parent="1" source="c32" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.333;" target="c30" value="template">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c35" edge="1" parent="1" source="c30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.667;" target="c32" value="chatter + queued mail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c36" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;6&lt;/b&gt;&lt;br&gt;Cancel a booking&lt;br&gt;(rules: Taki, buttons: Saad + Sarath)" vertex="1">
+          <mxGeometry height="132" width="270" x="600" y="964" as="geometry" />
+        </mxCell>
+        <mxCell id="c37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" y="958" as="geometry" />
+        </mxCell>
+        <mxCell id="c38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User) *" vertex="1">
+          <mxGeometry height="66" width="250" y="1036" as="geometry" />
+        </mxCell>
+        <mxCell id="c39" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="c40" edge="1" parent="1" source="c37" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.333;" target="c36" value="cancel + reason">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c41" edge="1" parent="1" source="c38" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.667;" target="c36" value="Cancel button">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c42" edge="1" parent="1" source="c36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c39" value="cancelled, reason, time">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c43" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;5&lt;/b&gt;&lt;br&gt;View my bookings&lt;br&gt;/my/bookings" vertex="1">
+          <mxGeometry height="132" width="270" x="600" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="c44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" y="1203" as="geometry" />
+        </mxCell>
+        <mxCell id="c45" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1174" as="geometry" />
+        </mxCell>
+        <mxCell id="c46" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D6*&lt;/b&gt; &amp;nbsp;Invoices&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;account.move&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1252" as="geometry" />
+        </mxCell>
+        <mxCell id="c47" edge="1" parent="1" source="c44" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.333;" target="c43" value="open My Account">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c48" edge="1" parent="1" source="c43" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.667;entryX=1;entryY=0.667;" target="c44" value="bookings, budget bar, invoices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c49" edge="1" parent="1" source="c45" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.333;" target="c43" value="own bookings (record rule)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c50" edge="1" parent="1" source="c46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="c43" value="invoices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c51" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="&lt;b&gt;7&lt;/b&gt;&lt;br&gt;Plan the food menu&lt;br&gt;(boards: Saad, rules: Taki, wizard: Syed)" vertex="1">
+          <mxGeometry height="210" width="270" x="600" y="1376" as="geometry" />
+        </mxCell>
+        <mxCell id="c52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Customer&lt;br&gt;(portal user) *" vertex="1">
+          <mxGeometry height="66" width="250" y="1409" as="geometry" />
+        </mxCell>
+        <mxCell id="c53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User) *" vertex="1">
+          <mxGeometry height="66" width="250" y="1487" as="geometry" />
+        </mxCell>
+        <mxCell id="c54" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2*&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="c55" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1458" as="geometry" />
+        </mxCell>
+        <mxCell id="c56" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1536" as="geometry" />
+        </mxCell>
+        <mxCell id="c57" edge="1" parent="1" source="c52" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.250;" target="c51" value="drag dish / add category">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c58" edge="1" parent="1" source="c51" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.667;" target="c52" value="updated board">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c59" edge="1" parent="1" source="c53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.750;" target="c51" value="drag dish, servings, wizard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c60" edge="1" parent="1" source="c54" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.250;" target="c51" value="dishes, prices, photos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c61" edge="1" parent="1" source="c55" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="c51" value="guests, budget, menu deadline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c62" edge="1" parent="1" source="c51" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.750;entryX=0;entryY=0.500;" target="c56" value="menu lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c63" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="&lt;b&gt;8&lt;/b&gt;&lt;br&gt;Manage bookings&lt;br&gt;(back office)" vertex="1">
+          <mxGeometry height="92" width="270" x="600" y="1641" as="geometry" />
+        </mxCell>
+        <mxCell id="c64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User) *" vertex="1">
+          <mxGeometry height="66" width="250" y="1654" as="geometry" />
+        </mxCell>
+        <mxCell id="c65" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1664" as="geometry" />
+        </mxCell>
+        <mxCell id="c66" edge="1" parent="1" source="c64" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c63" value="create / edit bookings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c67" edge="1" parent="1" source="c65" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="c63" value="list, calendar, form">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c68" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;9&lt;/b&gt;&lt;br&gt;Create invoice" vertex="1">
+          <mxGeometry height="210" width="270" x="600" y="1788" as="geometry" />
+        </mxCell>
+        <mxCell id="c69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue staff&lt;br&gt;(Venue Booking: User) *" vertex="1">
+          <mxGeometry height="66" width="250" y="1860" as="geometry" />
+        </mxCell>
+        <mxCell id="c70" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D4*&lt;/b&gt; &amp;nbsp;Menu lines&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking.menu.line&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1792" as="geometry" />
+        </mxCell>
+        <mxCell id="c71" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D9&lt;/b&gt; &amp;nbsp;Invoice products (Venue Hire, Catering)&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;product.product&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1870" as="geometry" />
+        </mxCell>
+        <mxCell id="c72" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D6*&lt;/b&gt; &amp;nbsp;Invoices&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;account.move&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="1948" as="geometry" />
+        </mxCell>
+        <mxCell id="c73" edge="1" parent="1" source="c69" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c68" value="Create Invoice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c74" edge="1" parent="1" source="c70" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.250;" target="c68" value="menu lines">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c75" edge="1" parent="1" source="c71" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.500;entryX=1;entryY=0.500;" target="c68" value="invoice products">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c76" edge="1" parent="1" source="c68" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.750;entryX=0;entryY=0.500;" target="c72" value="draft invoice">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c77" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="&lt;b&gt;13&lt;/b&gt;&lt;br&gt;Mark finished events Done" vertex="1">
+          <mxGeometry height="92" width="270" x="600" y="2053" as="geometry" />
+        </mxCell>
+        <mxCell id="c78" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Odoo scheduler&lt;br&gt;(cron)" vertex="1">
+          <mxGeometry height="66" width="250" y="2066" as="geometry" />
+        </mxCell>
+        <mxCell id="c79" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D3*&lt;/b&gt; &amp;nbsp;Bookings&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.booking&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="2076" as="geometry" />
+        </mxCell>
+        <mxCell id="c80" edge="1" parent="1" source="c78" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c77" value="hourly tick">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c81" edge="1" parent="1" source="c79" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0;exitY=0.333;entryX=1;entryY=0.333;" target="c77" value="booked + ended">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c82" edge="1" parent="1" source="c77" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.667;" target="c79" value="state = Done">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c83" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;10&lt;/b&gt;&lt;br&gt;Manage venues + food&lt;br&gt;(forms, Food kanban)" vertex="1">
+          <mxGeometry height="132" width="270" x="600" y="2200" as="geometry" />
+        </mxCell>
+        <mxCell id="c84" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator) *" vertex="1">
+          <mxGeometry height="66" width="250" y="2233" as="geometry" />
+        </mxCell>
+        <mxCell id="c85" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D1*&lt;/b&gt; &amp;nbsp;Venues + venue categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.room, venue.room.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="2204" as="geometry" />
+        </mxCell>
+        <mxCell id="c86" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D2*&lt;/b&gt; &amp;nbsp;Food + food categories&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;venue.food, venue.food.category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="2282" as="geometry" />
+        </mxCell>
+        <mxCell id="c87" edge="1" parent="1" source="c84" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c83" value="venues, food, categories, photos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c88" edge="1" parent="1" source="c83" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.333;entryX=0;entryY=0.500;" target="c85" value="venues">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c89" edge="1" parent="1" source="c83" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.667;entryX=0;entryY=0.500;" target="c86" value="food">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c90" parent="1" style="rounded=1;arcSize=14;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="&lt;b&gt;11&lt;/b&gt;&lt;br&gt;Block / unblock customers" vertex="1">
+          <mxGeometry height="92" width="270" x="600" y="2387" as="geometry" />
+        </mxCell>
+        <mxCell id="c91" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#3b6db3;strokeWidth=2;fontStyle=1;fontSize=12;" value="Venue manager&lt;br&gt;(Administrator) *" vertex="1">
+          <mxGeometry height="66" width="250" y="2400" as="geometry" />
+        </mxCell>
+        <mxCell id="c92" parent="1" style="shape=partialRectangle;right=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="&lt;b&gt;D5*&lt;/b&gt; &amp;nbsp;Customers, users, blocked flag&lt;br&gt;&lt;font style=&quot;font-size:9px&quot; color=&quot;#666666&quot;&gt;res.partner, res.users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="46" width="320" x="1260" y="2410" as="geometry" />
+        </mxCell>
+        <mxCell id="c93" edge="1" parent="1" source="c91" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c90" value="block / unblock + reason">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c94" edge="1" parent="1" source="c90" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.500;entryX=0;entryY=0.500;" target="c92" value="blocked flag, reason">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c95" edge="1" parent="1" source="c18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.25;exitY=1;entryX=0.25;entryY=0;" target="c21" value="booking request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c96" edge="1" parent="1" source="c21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.75;exitY=0;entryX=0.75;entryY=1;" target="c18" value="booking or error">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c97" edge="1" parent="1" source="c21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="c30" value="booking confirmed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c98" edge="1" parent="1" source="c36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="c30" value="booking cancelled">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c99" edge="1" parent="1" source="c63" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;endSize=7;fontSize=10;labelBackgroundColor=#ffffff;strokeColor=#555555;fontColor=#333333;exitX=1;exitY=0.95;entryX=1;entryY=0.05;" target="c21" value="new or edited booking">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="936" y="1728" />
+              <mxPoint x="936" y="488" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c100" parent="1" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;whiteSpace=wrap;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="200" x="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="c101" parent="1" style="rounded=1;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" value="Saad Ali" vertex="1">
+          <mxGeometry height="24" width="170" x="1660" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c102" parent="1" style="rounded=1;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" value="Sarath Lal" vertex="1">
+          <mxGeometry height="24" width="170" x="1660" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="c103" parent="1" style="rounded=1;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" value="Syed Ayaan Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="1660" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="c104" parent="1" style="rounded=1;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" value="Taki Ahmed" vertex="1">
+          <mxGeometry height="24" width="170" x="1660" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="c105" parent="1" style="rounded=1;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" value="Zeyan Shahid" vertex="1">
+          <mxGeometry height="24" width="170" x="1660" y="144" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
